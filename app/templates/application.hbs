@@ -1,3 +1,59 @@
-<h2 id="title">Welcome to Ember</h2>
+{{#md-navbar name='Firm name here' class='indigo'}}
+  <!-- A workaround to get the "active" class
+    to apply to the active <li> automatically -->
 
+  {{#link-to 'about' tagName='li'}}
+    {{link-to 'About' 'about'}}
+  {{/link-to}}
+
+  {{#link-to 'attorneys' tagName='li'}}
+    {{link-to 'Attorneys' 'attorneys'}}
+  {{/link-to}}
+  
+  {{#link-to 'contact' tagName='li'}}
+    {{link-to 'Contact us' 'contact'}}
+  {{/link-to}}
+
+  {{#link-to 'practices' tagName='li'}}
+    {{link-to 'Practices' 'practices'}}
+  {{/link-to}}
+
+{{/md-navbar}}
+
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
 {{outlet}}
+
+
+{{!-- ember-cli-materialize modal container --}}
+{{md-modal-container}}
